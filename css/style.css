@@ -1,0 +1,568 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*-----------------------------------------------------
+    Global
+------------------------------------------------------*/
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.4rem;
+    background: #26282F;
+    color: #d7dae2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body,
+html {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    max-width: 1300px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+p {
+    line-height: 1.6;
+    letter-spacing: .1rem;
+}
+
+a.btn {
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    display: inline-block;
+    padding: 2rem 0;
+    letter-spacing: .1em;
+    -webkit-animation: zoom 2s infinite;
+    animation: zoom 2s infinite;
+}
+
+@-webkit-keyframes zoom {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes zoom {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+h2 {
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: .7;
+    color: #fff;
+    padding: 2.5rem 0;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.element-animation {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+}
+
+.element-animation.element-show {
+    opacity: 1;
+    -webkit-transition: all 1.5s;
+    -o-transition: all 1.5s;
+    transition: all 1.5s;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+}
+
+/*-----------------------------------------------------
+    Header
+------------------------------------------------------*/
+header {
+    padding: 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 10rem;
+}
+
+nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+nav ul a {
+    color: #fff;
+    display: inline-block;
+    padding: 0 2rem;
+    letter-spacing: -0.016666666666666666rem;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+nav ul a::after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: #c2c5ce;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+nav ul a:hover::after {
+    width: 100%;
+    background-color: #c2c5ce;
+}
+
+nav ul a:hover {
+    color: #b5b7be;
+}
+
+.title {
+    height: 65vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.title-text {
+    width: 70%;
+}
+
+.title-text p {
+    width: 70%;
+}
+
+.small {
+    color: #9EA4B6;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 12rem;
+    font-weight: 700;
+    line-height: .8;
+    color: #fff;
+    padding: 2.5rem 0;
+}
+
+h1 span {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+/* Mobile*/
+.sidenav {
+    padding: 10rem 0;
+    height: 0;
+    width: 100%;
+    opacity: 0;
+    position: fixed;
+    text-align: right;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+    background: #26282F;
+    overflow-x: hidden;
+    -webkit-transition: .8s;
+    -o-transition: .8s;
+    transition: .8s;
+}
+
+.sidenav a {
+    padding: 2rem;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.sidenav a:hover {
+    color: #b5b7be;
+}
+
+.sidenav #closeBtn {
+    font-size: 3.8rem;
+}
+
+.nav-btn {
+    padding: 3.5rem 2rem;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.nav-btn:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.nav-line-01 {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 2px;
+    background: #fff;
+    margin: 5px auto;
+}
+
+.nav-line-02 {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 2px;
+    background: #fff;
+    margin: 5px auto;
+}
+
+.nav-line-03 {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 2px;
+    background: #fff;
+    margin: 5px auto;
+}
+
+/* Mobile-end*/
+/*-----------------------------------------------------
+    About
+------------------------------------------------------*/
+.section-about {
+    background: #1B1C21;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.section-about .wrapper {
+    position: relative;
+}
+
+.section-about .about-title {
+    position: absolute;
+    width: 100%;
+}
+
+.section-about img {
+    width: 100%;
+    margin-top: 6rem;
+}
+
+.section-about p {
+    width: 60%;
+    margin: 4rem auto 0;
+}
+
+/*-----------------------------------------------------
+    Portfolio
+------------------------------------------------------*/
+.section-portfolio {
+    padding: 10rem 0;
+}
+
+.portfolio-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.portfolio-content_item {
+    width: 48%;
+}
+
+.portfolio-card {
+    text-align: center;
+}
+
+.portfolio-card img {
+    width: 100%;
+}
+
+.portfolio-card_text {
+    padding: 3rem 0;
+}
+
+.portfolio-card_text p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #FE9F3C;
+}
+
+.card-bg-1 {
+    background: url(../img/work1.jpg) no-repeat center center;
+    background-size: 60rem;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    height: 30rem;
+    width: 100%;
+    z-index: 1;
+}
+
+.card-bg-1:hover {
+    background: url(../img/work1.jpg) no-repeat center center;
+    background-size: 80rem;
+}
+
+.card-bg-2 {
+    background: url(../img/work2.jpg) no-repeat center center;
+    background-size: 60rem;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    height: 30rem;
+    width: 100%;
+    z-index: 1;
+}
+
+.card-bg-2:hover {
+    background: url(../img/work2.jpg) no-repeat center center;
+    background-size: 80rem;
+}
+
+.card-bg-3 {
+    background: url(../img/work3.jpg) no-repeat center center;
+    background-size: 60rem;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    height: 30rem;
+    width: 100%;
+    z-index: 1;
+}
+
+.card-bg-3:hover {
+    background: url(../img/work3.jpg) no-repeat center center;
+    background-size: 80rem;
+}
+
+.card-bg-4 {
+    background: url(../img/work4.jpg) no-repeat center center;
+    background-size: 60rem;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    height: 30rem;
+    width: 100%;
+    z-index: 1;
+}
+
+.card-bg-4:hover {
+    background: url(../img/work4.jpg) no-repeat center center;
+    background-size: 80rem;
+}
+
+/*-----------------------------------------------------
+    Services
+------------------------------------------------------*/
+.section-services {
+    background: #1B1C21;
+    padding: 10rem 0;
+}
+
+.section-services h2 {
+    font-size: 6rem;
+}
+
+/*-----------------------------------------------------
+    Skills
+------------------------------------------------------*/
+.section-skills {
+    padding: 12rem 0;
+    text-align: center;
+}
+
+.section-skills .line {
+    content: '';
+    display: block;
+    background: #56575a;
+    width: 100%;
+    height: 0.1px;
+}
+
+.section-skills h2 {
+    font-size: 6rem;
+    margin: 2rem 0;
+}
+
+.skills {
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.skill {
+    padding: 2rem 0;
+}
+
+.skills_item {
+    width: 45%;
+}
+
+.skill-line {
+    content: '';
+    display: block;
+    background: #56575a;
+    width: 100%;
+    height: 1px;
+}
+
+.skill-design {
+    content: '';
+    display: block;
+    background: #fff;
+    width: 90%;
+    height: 100%;
+}
+
+.skill-usability {
+    content: '';
+    display: block;
+    background: #fff;
+    width: 80%;
+    height: 100%;
+}
+
+.skill-seo {
+    content: '';
+    display: block;
+    background: #fff;
+    width: 70%;
+    height: 100%;
+}
+
+.skill-html {
+    content: '';
+    display: block;
+    background: #fff;
+    width: 60%;
+    height: 100%;
+}
+
+/*-----------------------------------------------------
+    Footer
+------------------------------------------------------*/
+footer {
+    background: #1B1C21;
+    padding: 10rem 0;
+    text-align: center;
+}
+
+.footer-socials ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.footer-socials ul a {
+    padding: 2rem 1rem;
+    font-weight: 700;
+    display: inline-block;
+    color: #fff;
+    letter-spacing: -0.016666666666666666rem;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.footer-socials ul a:hover {
+    color: #b5b7be;
+}

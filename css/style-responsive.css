@@ -1,0 +1,82 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@media screen and (max-width: 900px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 9rem;
+    }
+
+    h2 {
+        font-size: 7rem;
+    }
+
+    .title-text {
+        width: 100%;
+    }
+
+    .title-text p {
+        width: 100%;
+    }
+
+    .section-services h2 {
+        font-size: 4rem;
+    }
+
+    .section-skills h2 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 2.3rem;
+    }
+
+    .portfolio-content {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .portfolio-content_item {
+        width: 100%;
+    }
+
+    .section-services h2 {
+        font-size: 3rem;
+    }
+
+    .section-skills h2 {
+        font-size: 3rem;
+    }
+
+    .skills {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .skills_item {
+        width: 100%;
+    }
+}
